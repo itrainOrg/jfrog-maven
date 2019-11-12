@@ -34,7 +34,7 @@ git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven.gi
             
     stage ('Install') {
         rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
-     }
+    }
  
     stage ('Deploy') {
         rtMaven.deployer.deployArtifacts buildInfo
