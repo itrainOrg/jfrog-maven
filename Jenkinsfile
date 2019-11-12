@@ -1,12 +1,11 @@
 node {
-    def server = Artifactory.server('amrita.jfrog.io')
+    def server = Artifactory.server('preethigowda.jfrog.io')
     def buildInfo = Artifactory.newBuildInfo()
     def rtMaven = Artifactory.newMavenBuild()
     
     
     stage ('Checkout Code') {
-        git credentialsId: 'githbID-mani', url: 'https://github.com/itrainpulsars/jfrog-maven.git'
-    }
+         git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven'    }
     stage ('Build') {
         rtMaven.tool = 'Maven-3.6.1' // Tool name from Jenkins configuration
         rtMaven.run pom: 'pom.xml', goals: 'clean compile'
