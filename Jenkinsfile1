@@ -1,4 +1,4 @@
-def server = Artifactory.server('atuldevops.jfrog.io')
+def server = Artifactory.server('preethigowda.jfrog.io')
 def buildInfo = Artifactory.newBuildInfo()
 def rtMaven = Artifactory.newMavenBuild()
 pipeline {
@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Code Checkout') { 
             steps {
-                git credentialsId: 'githubID', url: 'https://github.com/itrainwarriors/jfrog-maven.git'
+          git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven.git'    
             }
         }
         stage('Build') { 
