@@ -5,8 +5,7 @@ node {
     
     
     stage ('Checkout Code') {
-git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven.git'
-    }
+git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven.git'    }
         stage ('Build') {
         rtMaven.tool = 'Maven-3.6.1' // Tool name from Jenkins configuration
         rtMaven.run pom: 'pom.xml', goals: 'clean compile'
