@@ -48,3 +48,4 @@ git credentialsId: 'githubID', url: 'https://github.com/itrainOrg/jfrog-maven.gi
     }
        
 }
+ 
